@@ -20,10 +20,17 @@ public class Generics
         }
     }
 
-    public static<T> void PrintVectorSorted(List<T> vector){
+    public static<T> void PrintVectorSorted(List<T> vector)
+    {
         System.out.print("[ ");
-        for(int i = 0; i < vector.size(); i++){
-            System.out.print(vector.get(i) + " ");
+        for(int i = 0; i < vector.size(); i++)
+        {
+            if(i == vector.size() - 1)
+            {
+                System.out.print(vector.get(i) + " ");
+            }else {
+                System.out.print(vector.get(i) + ", ");
+            }
         }
         System.out.println("]");
     }
